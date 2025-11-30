@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kurt Andrei S. Delasa - IT Student Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #2c3e50;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* TOP SECTION FLEX LAYOUT */
+    .top-section {
+      display: flex;
+      background: #ffffff;
+      padding: 40px 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #2c3e50;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .intro {
+      flex: 1;
+      min-width: 280px;
+      text-align: left;
+    }
+
+    .intro h1 {
+      font-size: 2.6em;
+      color: #2c3e50;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 1.2em;
+      font-weight: 300;
+      color: #2c3e50;
+      margin-top: 10px;
+    }
+
+    /* VERTICAL NAVIGATION */
+    .sidebar {
+      background: #2c3e50;
+      padding: 20px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      height: fit-content;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #5dade2;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #e6f2ff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    /* PROJECT GALLERY STYLING */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  background: #ffffff;
+  border: 2px solid #2c3e50;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.gallery-item h3 {
+  font-size: 1.1em;
+  color: #2c3e50;
+  margin: 0;
+}
+
+
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  }
+
+    .social-links a {
+      color: #2c3e50;
+      margin: 0 12px;
+      font-size: 1.5em;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .cert-thumb {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 3px solid #2c3e50;
+      transition: 0.3s;
+    }
+
+    .cert-thumb:hover {
+      transform: scale(1.05);
+    }
+
+    .cert-modal {
+      display: none;
+      position: fixed;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+      z-index: 9999;
+    }
+
+    .cert-modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.8);
+    }
+
+    @media (max-width: 768px) {
+      .top-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .intro {
+        text-align: center;
+      }
+
+      .sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- TOP SECTION -->
+  <div class="top-section">
+    <img src="Profile Pic 3.jpg" alt="Profile Picture" class="profile-pic" />
+
+    <div class="intro">
+      <h1>Kurt Andrei S. Delasa</h1>
+      <p>IT Student | Aspiring Software Engineer</p>
+    </div>
+
+    <div class="sidebar">
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Hello! I’m <strong>Kurt Andrei</strong>, an IT student passionate about coding, networking, cybersecurity, and building real-world tech solutions.</p>
+      <p>I enjoy creating projects that combine design, functionality, and problem-solving. Whether it’s developing applications, building GUIs, automating tasks, styling web pages, or working with databases, I love exploring different areas of technology.</p>
+      <p>I’m currently studying at <strong>San Sebastian College – Recoletos de Cavite</strong> where I continue to improve my skills and knowledge in the IT field. My goal is to become a skilled IT professional—specializing in <strong>Cybersecurity</strong> and IT system management.</p>
+      <p>Outside academics, I’m interested in volleyball, Taekwondo, biking, and exploring tools that help me become a better creator every day.</p>
+      <p>Feel free to explore my portfolio below to see the projects I’ve worked on, my certifications, and my growth as an IT student.</p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>Programming: Python, Java, C++</li>
+        <li>Web Development: HTML, CSS, JavaScript</li>
+        <li>Database: MySQL, MongoDB</li>
+        <li>Networking Fundamentals</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li>Portfolio Website</li>
+        <li>Library Management System (Java + MySQL)</li>
+        <li>Real-time Chat App (Python Sockets)</li>
+        <li>Online-Resume</li>
+        <li>Cartoon Character (HTML + CSS)</li>
+      </ul>
+    </div>
+  </section>
+
+ <section id="project-gallery">
+  <div class="card">
+    <h2>Project Gallery</h2>
+    <p>Here are snapshots of some of my featured projects:</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="LMS.png" alt="LMS Project" onclick="openCert(this.src)" />
+        <h3>LMS</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="Chat App.png" alt="Chat App Project" onclick="openCert(this.src)" />
+        <h3>Chat App</h3>
+      </div>
+      <div class="gallery-item">
+        <img src="Portfolio Website.jpg" alt="Portfolio Website" onclick="openCert(this.src)" />
+        <h3>Portfolio Website</h3>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="Resume.png" alt="New Project 4" onclick="openCert(this.src)" />
+        <h3>Resume</h3>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="Cartoon.png" alt="New Project 5" onclick="openCert(this.src)" />
+        <h3>Cartoon Character</h3>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <div class="card">
+      <h2>My Certificates</h2>
+      <p>Click any certificate to view it in full size.</p>
+      <div class="cert-grid">
+        <img src="CS202.png" class="cert-thumb" onclick="openCert(this.src)" />
+        <img src="CS406.png" class="cert-thumb" onclick="openCert(this.src)" />
+        <img src="MA121.png" class="cert-thumb" onclick="openCert(this.src)" />
+      </div>
+    </div>
+  </section>
+
+  <!-- POPUP MODAL -->
+  <div id="certModal" class="cert-modal" onclick="closeCert()">
+    <img id="certFull" />
+  </div>
+
+  <!-- POPUP SCRIPT -->
+<script>
+  function openCert(src) {
+    document.getElementById("certFull").src = src;
+    document.getElementById("certModal").style.display = "flex";
+  }
+  function closeCert() {
+    document.getElementById("certModal").style.display = "none";
+  }
+</script>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="card">
+      <h2>Contact Me</h2>
+      <p>You can reach me through the links below:</p>
+      <div class="social-links">
+        <a href="https://mail.google.com/mail/u/1/#inbox"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/kurt-andrei-delasa-2a4a6a290/ target="_blank><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Kurt Andrei S. Delasa. All rights reserved.</p>
